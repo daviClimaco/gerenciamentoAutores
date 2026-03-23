@@ -13,7 +13,7 @@ public class Autor {
     private Long id;
 
     @Column(name = "nome_autor")
-    private String titulo;
+    private String nome;
 
     @Column(name = "nacionalidade_autor")
     private String nacionalidade;
@@ -29,12 +29,12 @@ public class Autor {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getNome() {
+        return nome;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getNacionalidade() {
