@@ -14,8 +14,8 @@ public class AutorServices {
         this.autorRepository = autorRepository;
     }
 
-    public void salvar(Autor autor){
-        autorRepository.save(autor);
+    public Autor salvar(Autor autor){
+        return autorRepository.save(autor);
     }
 
     public void deletar(Long id) {
@@ -28,6 +28,11 @@ public class AutorServices {
 
     public List<Autor> buscarTodosAutores(){
         return autorRepository.findAll();
+    }
+
+    public Autor atualizar(Long id, Autor autor){
+        autor.setId(id);
+        return autorRepository.save(autor);
     }
 
 }
